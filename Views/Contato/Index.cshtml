@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Página de Contatos";
+    var hora = DateTime.Now.Hour;
+    var msg = "";
+    if (hora > 12)
+    {
+        msg = "Boa tarde";
+    }
+    else if (hora >= 18)
+    {
+        msg = "Boa noite";
+    }
+    else
+    {
+        msg = "Bom dia";
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">@msg, Seja Bem-Vindo!</h1>
+    <h2>Lista de contatos</h2>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-outline-primary me-md-2" role="button" asp-asp-controller="Contato" asp-action="Criar">Adicionar contato</a>
+    </div>
+    <br>
+
+    <table class="table caption-top">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Telefone</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Matheus</td>
+                <td>mathes@gmail.com</td>
+                <td>(71)3244-2342</td>
+                <td>
+                    <div>
+                        <a role="button" class="btn btn-primary"  asp-asp-controller="Contato" asp-action="Editar">Editar</a>
+                        <a role="button" class="btn btn-danger"   asp-asp-controller="Contato" asp-action="VerificarDeletar">Deletar</a>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>jacos@gmail.com</td>
+                <td>(61)3423-3423</td>
+                <td>
+                    <div>
+                        <a role="button" class="btn btn-primary" asp-asp-controller="Contato" asp-action="Editar">Editar</a>
+                        <a role="button" class="btn btn-danger"  asp-asp-controller="Contato" asp-action="VerificarDeletar">Deletar</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>larryss@gmail.com</td>
+                <td>(71)3246-4422</td>
+                <td>
+                    <div>
+                        <a role="button" class="btn btn-primary" asp-asp-controller="Contato" asp-action="Editar">Editar</a>
+                        <a role="button" class="btn btn-danger"  asp-asp-controller="Contato" asp-action="VerificarDeletar">Deletar</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
