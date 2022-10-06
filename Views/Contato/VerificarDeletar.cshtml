@@ -1,19 +1,5 @@
 @{
     ViewData["Title"] = "Página de Contatos";
-    var hora = DateTime.Now.Hour;
-    var msg = "";
-    if (hora > 12)
-    {
-        msg = "Boa tarde";
-    }
-    else if (hora >= 18)
-    {
-        msg = "Boa noite";
-    }
-    else
-    {
-        msg = "Bom dia";
-    }
 }
 
 <div class="text-center">
@@ -25,5 +11,5 @@
         <a role="button" class="btn btn-danger" asp-asp-controller="Contato" asp-action="Index">Voltar</a>
     </div>
     </td>
-    
+
 </div>
