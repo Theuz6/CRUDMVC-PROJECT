@@ -3,6 +3,14 @@ using CRUDMVC_PROJECT.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+
+string mySqlConnection = builder.Configuration.GetConnectionString("DefaultDatabase");
+
+builder.Services.AddDbContext<ContatoContext>(opt => {
+    opt.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection));
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -15,14 +23,6 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
-builder.Services.AddControllers();
-
-string mySqlConnection = builder.Configuration.GetConnectionString("DefaultDatabase");
-
-builder.Services.AddDbContext<ContatoContext>(opt => {
-    opt.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection));
-});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
