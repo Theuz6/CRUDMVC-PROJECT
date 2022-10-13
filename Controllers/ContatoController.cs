@@ -6,6 +6,11 @@ namespace CRUDMVC.Controllers;
 
 public class ContatoController : Controller
 {
+    private readonly IContatoRepository _contatoRepositorio;
+    public ContatoController(IContatoRepository contatoRepositorio)
+    {
+        _contatoRepositorio = contatoRepositorio;
+    }
     public IActionResult Index()
     {
         return View();
@@ -21,5 +26,11 @@ public class ContatoController : Controller
     public IActionResult VerificarDeletar()
     {
         return View();
+    }
+    [httpPost]
+    public IActionResult Criar(ContatoModel contato)
+    {
+        _contatoRepositorio.adicionar(contato);
+        return RedirectToAction("Index");
     }
 }

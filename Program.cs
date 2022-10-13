@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Dependency.Injection;
 using CRUDMVC_PROJECT.Data;
+using CRUDMVC_PROJECT.Repository;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +13,8 @@ string mySqlConnection = builder.Configuration.GetConnectionString("DefaultDatab
 builder.Services.AddDbContext<ContatoContext>(opt => {
     opt.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection));
 });
+
+builder.Services.AddScope<IContatoRepository, ContatoRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
