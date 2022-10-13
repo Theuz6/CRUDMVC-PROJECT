@@ -8,6 +8,6 @@ namespace CRUDMVC_PROJECT.Data
         public ContatoContext(DbContextOptions<ContatoContext> options) : base(options)
         {
         }
-        public DbSet<ContatoModel> contato {get;set;}
+        public DbSet<ContatoModel> Contato {get;set;}
     }
 }

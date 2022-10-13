@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DB49yQjt14nKwslQ7m7Zfr4x9CkoufRYvkIxD5ZHb6JVDZno2sPNjLBXGLkYCTj5ztzxlqh6qmMQ3RYusw6fIg==",
+  "dgSpecHash": "KBYV2iBuHrx7GX58ly5ZioxVMGf16n5Icd1uI//VsIJQw8P7KjuXvECROZ8+xh0NSI8bSRHZm5Xft80wrsNU9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lab. de Software\\Desktop\\CRUDMVC-PROJECT\\CRUDMVC.csproj",
+  "projectFilePath": "C:\\Users\\Lab. de Software\\Desktop\\gitclone\\CRUDMVC-PROJECT\\CRUDMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lab. de Software\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lab. de Software\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
