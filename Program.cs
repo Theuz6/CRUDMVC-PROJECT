@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Dependency.Injection;
+using Microsoft.Extensions.DependencyInjection;
 using CRUDMVC_PROJECT.Data;
 using CRUDMVC_PROJECT.Repository;
 
