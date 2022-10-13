@@ -1,4 +1,4 @@
-namespace CRUDMVC.Models;
+namespace CRUDMVC_PROJECT.Models;
 
 public class ErrorViewModel
 {

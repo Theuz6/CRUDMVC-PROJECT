@@ -14,7 +14,7 @@ builder.Services.AddDbContext<ContatoContext>(opt => {
     opt.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection));
 });
 
-builder.Services.AddScope<IContatoRepository, ContatoRepository>();
+builder.Services.AddScoped<IContatoRepository, ContatoRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

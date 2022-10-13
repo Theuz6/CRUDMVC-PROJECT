@@ -1,8 +1,9 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using CRUDMVC.Models;
+using CRUDMVC_PROJECT.Models;
+using CRUDMVC_PROJECT.Repository;
 
-namespace CRUDMVC.Controllers;
+namespace CRUDMVC_PROJECT.Controllers;
 
 public class ContatoController : Controller
 {
@@ -27,7 +28,7 @@ public class ContatoController : Controller
     {
         return View();
     }
-    [httpPost]
+    [HttpPost]
     public IActionResult Criar(ContatoModel contato)
     {
         _contatoRepositorio.adicionar(contato);

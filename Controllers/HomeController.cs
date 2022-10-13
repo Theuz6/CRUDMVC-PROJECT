@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using CRUDMVC.Models;
+using CRUDMVC_PROJECT.Models;
 
-namespace CRUDMVC.Controllers;
+namespace CRUDMVC_PROJECT.Controllers;
 
 public class HomeController : Controller
 {
