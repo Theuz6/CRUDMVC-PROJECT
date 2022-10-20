@@ -26,14 +26,22 @@ public class ContatoController : Controller
         ContatoModel contato = _contatoRepositorio.buscarId(id);
         return View(contato);
     }
-    public IActionResult VerificarDeletar()
+    public IActionResult VerificarDeletar(int id)
     {
-        return View();
+        ContatoModel contato = _contatoRepositorio.buscarId(id);
+        return View(contato);
     }
     [HttpPost]
     public IActionResult Criar(ContatoModel contato)
     {
         _contatoRepositorio.adicionar(contato);
+        return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public IActionResult Atualizar(ContatoModel contato)
+    {
+        _contatoRepositorio.atualizar(contato);
         return RedirectToAction("Index");
     }
 }

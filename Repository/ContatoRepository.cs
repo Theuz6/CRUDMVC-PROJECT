@@ -21,6 +21,22 @@ namespace CRUDMVC_PROJECT.Repository
             return contato;
         }
 
+        public ContatoModel atualizar(ContatoModel contato)
+        {
+            ContatoModel contatoDB = buscarId(contato.Id);
+
+            if(contatoDB == null) throw new Exception("Houve um erro:");
+
+            contatoDB.Nome = contato.Nome;
+            contatoDB.Email = contato.Email;
+            contatoDB.Telefone = contato.Telefone;
+
+            contato_Context.Contato.Update(contatoDB);
+            contato_Context.SaveChanges();
+            return contatoDB;
+
+        }
+
         public ContatoModel buscarId(int id)
         {
             return contato_Context.Contato.FirstOrDefault(x => x.Id == id);
