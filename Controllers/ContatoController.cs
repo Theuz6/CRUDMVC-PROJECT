@@ -14,7 +14,8 @@ public class ContatoController : Controller
     }
     public IActionResult Index()
     {
-        return View();
+        List<ContatoModel> contato = _contatoRepositorio.listarContatos();
+        return View(contato);
     }
     public IActionResult Criar()
     {

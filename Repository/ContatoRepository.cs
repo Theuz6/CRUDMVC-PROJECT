@@ -20,5 +20,10 @@ namespace CRUDMVC_PROJECT.Repository
             contato_Context.SaveChanges();
             return contato;
         }
+
+        public List<ContatoModel> listarContatos()
+        {
+            return contato_Context.Contato.ToList();
+        }
     }
 }
