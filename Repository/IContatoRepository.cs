@@ -9,6 +9,7 @@ namespace CRUDMVC_PROJECT.Repository
     public interface IContatoRepository
     {
         ContatoModel adicionar (ContatoModel contato);
+        ContatoModel buscarId (int Id);
         List<ContatoModel> listarContatos();
     }
 }

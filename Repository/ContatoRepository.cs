@@ -21,6 +21,11 @@ namespace CRUDMVC_PROJECT.Repository
             return contato;
         }
 
+        public ContatoModel buscarId(int id)
+        {
+            return contato_Context.Contato.FirstOrDefault(x => x.Id == id);
+        }
+
         public List<ContatoModel> listarContatos()
         {
             return contato_Context.Contato.ToList();
