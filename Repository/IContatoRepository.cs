@@ -12,5 +12,6 @@ namespace CRUDMVC_PROJECT.Repository
         ContatoModel atualizar (ContatoModel contato);
         ContatoModel buscarId (int id);
         List<ContatoModel> listarContatos();
+        bool deletar(int id);
     }
 }

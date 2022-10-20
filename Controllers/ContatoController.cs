@@ -26,6 +26,13 @@ public class ContatoController : Controller
         ContatoModel contato = _contatoRepositorio.buscarId(id);
         return View(contato);
     }
+
+    public IActionResult Deletar(int id)
+    {
+        _contatoRepositorio.deletar(id);
+        return RedirectToAction("Index");
+    }
+    
     public IActionResult VerificarDeletar(int id)
     {
         ContatoModel contato = _contatoRepositorio.buscarId(id);

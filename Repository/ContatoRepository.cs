@@ -42,6 +42,14 @@ namespace CRUDMVC_PROJECT.Repository
             return contato_Context.Contato.FirstOrDefault(x => x.Id == id);
         }
 
+        public bool deletar(int id)
+        {
+            ContatoModel contatoDB = buscarId(id);
+            contato_Context.Contato.Remove(contatoDB);
+            contato_Context.SaveChanges();
+            return true;
+        }
+
         public List<ContatoModel> listarContatos()
         {
             return contato_Context.Contato.ToList();
