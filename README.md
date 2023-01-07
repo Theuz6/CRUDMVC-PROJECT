@@ -1,3 +1,3 @@
 # C# - Desenvolvimento de sistemas 2.
 
-## Projeto da aula de C# com Razor.
+## Projeto de criação de um crud usando a linguagem C# juntamente com o Razor.
